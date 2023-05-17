@@ -38,3 +38,7 @@ jobs:
           comment: 🤖 Auto-closing issue, if you still need help please reopen the issue or ask for help in the community above
           labels: |
             triage/accepted
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+
