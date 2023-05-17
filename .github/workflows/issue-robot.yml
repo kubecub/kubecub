@@ -13,8 +13,8 @@ jobs:
         with:
           # it is not necessary to decide whether you need to modify the issue header content
           IS_MODIFY_TITLE: true
-          CUSTOM_BOT_NOTE: RoBot detected the issue body's language is not English, translate it automatically. 👯👭🏻🧑‍🤝‍🧑👫🧑🏿‍🤝‍🧑🏻👩🏾‍🤝‍👨🏿👬🏿
           BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
-          # 非必须，填写您的机器人github账户token
-          BOT_LOGIN_NAME: kubbot
-          # 非必须，建议不填写，机器人名称会根据token获取到，若填写，请一定与token对应的github账户名相同
+          # Required, input your bot github token
+          BOT_LOGIN_NAME: Issues-translate-bot
+          # Not required, suggest not input, action will get name from BOT_GITHUB_TOKEN
+          # If input, BOT name must match github token
