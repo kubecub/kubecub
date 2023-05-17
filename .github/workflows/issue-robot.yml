@@ -15,6 +15,6 @@ jobs:
           IS_MODIFY_TITLE: true
           BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
           # Required, input your bot github token
-          BOT_LOGIN_NAME: Issues-translate-bot
+          BOT_LOGIN_NAME: kubbot
           # Not required, suggest not input, action will get name from BOT_GITHUB_TOKEN
           # If input, BOT name must match github token
