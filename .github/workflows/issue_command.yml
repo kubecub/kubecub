@@ -6,6 +6,9 @@ jobs:
   slashCommandDispatch:
     runs-on: ubuntu-latest
     steps:
+      - name: Create URL to the run output
+        id: vars
+        run: echo "run-url=https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >> $GITHUB_OUTPUT
       - name: Slash Command Dispatch
         uses: peter-evans/slash-command-dispatch@v3
         with:
