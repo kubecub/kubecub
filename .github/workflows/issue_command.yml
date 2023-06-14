@@ -11,9 +11,15 @@ jobs:
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
           reaction-token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
+          issue-number: ${{ github.event.client_payload.github.payload.issue.number }}
           commands: |
             deploy
             integration-test
             build-docs
             help
             hello
+          body: |
+            [Command run output][1]
+
+            [1]: ${{ steps.vars.outputs.run-url }}
